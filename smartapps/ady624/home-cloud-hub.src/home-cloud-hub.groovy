@@ -46,8 +46,8 @@ definition(
     oauth: true)
 
 private getMyQAppId() {
-    return 'Vj8pQggXLhLy0WHahglCD4N1nAkkXQtGYpq2HrHD7H1nvmbT55KqtN6RSF4ILB/i'
-	return 'JVM/G9Nwih5BwKgNCjLxiFUQxQijAebyyg8QUHr7JOrP+tuPb8iHfRHKwTmDzHOu'
+    // updated for ios app id
+    return 'NWknvuBd7LoFHfXmKNMBcgajXtZEgKUh4V7WNzMidrpUUluDpVYVZx+xT4PCM5Kx'
 }
 
 private getLocalServerURN() {
@@ -1136,7 +1136,7 @@ def cmd_myq(device, command, value, retry) {
             result = httpPutJson([
                 uri: "https://myqexternal.myqdevice.com/api/v4/deviceAttribute/putDeviceAttribute?appId=" + getMyQAppId() + "&securityToken=${state.hch.security[module_name].securityToken}",
                 headers: [
-                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                    "User-Agent": "Chamberlain/2793 (iPhone; iOS 9.3; Scale/2.00)"
                 ],
                 body: [
 					ApplicationId: getMyQAppId(),
